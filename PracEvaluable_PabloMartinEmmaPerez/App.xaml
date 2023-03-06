@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracEvaluable_PabloMartinEmmaPerez.App">
+    <Application.Resources>
+
+        <Style TargetType="StackLayout" x:Key="StackFondo">
+             <Setter Property="Orientation" Value="Vertical"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+        </Style>
+
+        <Style TargetType="StackLayout" x:Key="StackCelda">
+             <Setter Property="Orientation" Value="Vertical"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="VerticalOptions" Value="Fill"/>
+             <Setter Property="Margin" Value="15,5,15,5"/>
+        </Style>
+          <Style TargetType="StackLayout" x:Key="StackCelda2">
+             <Setter Property="Orientation" Value="Vertical"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="HorizontalOptions" Value="Start"/>
+        </Style>
+
+        <Style TargetType="StackLayout" x:Key="StackLayoutTitulo">
+             <Setter Property="Orientation" Value="Horizontal"/>
+             <Setter Property="BackgroundColor" Value="Black"/>
+             <Setter Property="Padding" Value="20"/>
+        </Style>
+
+        <Style TargetType="StackLayout" x:Key="StackLayoutTituloSecundario">
+             <Setter Property="Orientation" Value="Horizontal"/>
+             <Setter Property="BackgroundColor" Value="Black"/>
+             <Setter Property="Padding" Value="20"/>
+             <Setter Property="BackgroundColor" Value="DarkSlateGray"/>
+        </Style>
+
+        <Style TargetType="StackLayout" x:Key="StackLayoutVerCen">
+             <Setter Property="Orientation" Value="Vertical"/>
+             <Setter Property="VerticalOptions" Value="Center"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+        </Style>
+
+        <Style TargetType="Image" x:Key="logo">
+             <Setter Property="HeightRequest" Value="70"/>
+             <Setter Property="HorizontalOptions" Value="Start"/>
+             <Setter Property="Source" Value="logoFederacionSinLetras.png"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="labelTitulo">
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="FontSize"  Value="30"/>
+             <Setter Property="HorizontalTextAlignment" Value="Start"/>
+             <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonPrincipal">
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="BorderWidth" Value="5"/>
+             <Setter Property="BorderColor" Value="Red"/>
+             <Setter Property="BackgroundColor" Value="Black"/>
+             <Setter Property="Opacity" Value="0.75"/>
+             <Setter Property="CornerRadius" Value="50"/>
+             <Setter Property="HeightRequest" Value="100"/>
+             <Setter Property="Margin" Value="10,0"/>
+             <Setter Property="FontSize" Value="20"/>                     
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonSecundario">
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="BorderWidth" Value="5"/>
+             <Setter Property="BorderColor" Value="Red"/>
+             <Setter Property="BackgroundColor" Value="Black"/>
+             <Setter Property="Opacity" Value="0.75"/>
+             <Setter Property="CornerRadius" Value="50"/>
+             <Setter Property="WidthRequest" Value="100"/>
+             <Setter Property="HeightRequest" Value="50"/>
+             <Setter Property="Margin" Value="10,0"/>
+             <Setter Property="FontSize" Value="15"/>                     
+        </Style>
+
+        <Style TargetType="ListView" x:Key="listviews">
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="SeparatorColor" Value="Red"/>
+             <Setter Property="HasUnevenRows" Value="True"/>
+        </Style>
+
+        <Style TargetType="Entry" x:Key="Entrys">
+             <Setter Property="FontSize" Value="20"/>
+             <Setter Property="PlaceholderColor" Value="White"/>
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+        </Style>
+        <Style TargetType="DatePicker">
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="TextColor" Value="White"/>
+        </Style>
+        <Style TargetType="TimePicker">
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="TextColor" Value="White"/>
+        </Style>
+        <Style TargetType="Picker">
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelCeldas">
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="HorizontalTextAlignment" Value="Start"/>
+             <Setter Property="FontSize" Value="20"/>
+             <Setter Property="Margin" Value="15,0,15,5"/>
+
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelNombreCarrera">
+             <Setter Property="FontAttributes" Value="Bold"/>
+             <Setter Property="HorizontalTextAlignment" Value="Start"/>
+             <Setter Property="FontSize" Value="20"/>
+             <Setter Property="TextColor" Value="DarkSlateGray"/>
+             <Setter Property="Margin" Value="15,5,15,0"/>
+
+
+        </Style>
+
+        <Style TargetType="Switch" x:Key="SwitchGratis">
+             <Setter Property="OnColor" Value="LightBlue"/>
+             <Setter Property="ThumbColor" Value="Red"/>
+        </Style>
+        <Style TargetType="Label" x:Key="CommonLabel">
+             <Setter Property="FontSize" Value="20"/>
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="VerticalTextAlignment" Value="Center"/>
+             <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        </Style>
+        <Style TargetType="Label" x:Key="LabelSwitch">
+             <Setter Property="VerticalTextAlignment" Value="Center"/>
+             <Setter Property="FontSize" Value="15"/>
+             <Setter Property="FontAttributes" Value="Bold"/>
+             <Setter Property="Margin" Value="10,0,0,0"/>
+             <Setter Property="TextColor" Value="White"/>
+
+        </Style>
+        <Style TargetType="Frame" x:Key="Frame">
+             <Setter Property="BorderColor" Value="Red"/>
+             <Setter Property="Margin" Value="10"/>
+             <Setter Property="VerticalOptions" Value="Center"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+        </Style>
+
+        <Style TargetType="StackLayout" x:Key="StackCeldaHor">
+             <Setter Property="Orientation" Value="Horizontal"/>
+             <Setter Property="BackgroundColor" Value="CadetBlue"/>
+             <Setter Property="HorizontalOptions" Value="Start"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelTituloListView">
+             <Setter Property="FontSize" Value="20"/>
+             <Setter Property="FontAttributes" Value="Bold"/>
+             <Setter Property="TextColor" Value="White"/>
+             <Setter Property="VerticalTextAlignment" Value="Center"/>
+             <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+    </Application.Resources>
+</Application>

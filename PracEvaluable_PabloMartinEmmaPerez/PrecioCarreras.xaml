@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PracEvaluable_PabloMartinEmmaPerez.PrecioCarreras">
+
+    <ContentPage.Content>
+
+        <StackLayout Style="{StaticResource StackFondo}">
+             <StackLayout Style="{StaticResource StackLayoutTitulo}">
+
+                <Image Style="{StaticResource logo}"/>
+
+                <Label Text="Lista de carreras Gratuitas"
+                       Style="{StaticResource labelTitulo}"/>
+
+             </StackLayout>
+
+             <StackLayout Orientation="Horizontal"
+                          HorizontalOptions="FillAndExpand"
+                          Style="{StaticResource StackLayoutTituloSecundario}">
+
+                 <StackLayout Orientation="Horizontal"
+                              HorizontalOptions="CenterAndExpand">
+                     <Label Text="Gratuita:"
+                        Style="{StaticResource CommonLabel}"
+                        VerticalTextAlignment="Center"/>
+                     <Label Text="NO"
+                            Style="{StaticResource LabelSwitch}"/>
+                     <Switch x:Name="gratuidadCarrera"
+                             Style="{StaticResource SwitchGratis}"
+                             IsToggled="False"
+                             Toggled="gratuidadCarrera_Toggled"/>
+                     <Label Text="SI"
+                            Style="{StaticResource LabelSwitch}"/>
+                 </StackLayout>
+
+             </StackLayout>
+             <StackLayout Style="{StaticResource StackFondo}">
+
+                  <ListView x:Name="listviewCarreras"
+                            ItemSelected="listviewCarreras_ItemSelected"
+                            Style="{StaticResource listviews}">
+                        <ListView.ItemTemplate>
+                             <DataTemplate>
+                                  <ViewCell>
+                                      <StackLayout Style="{StaticResource StackCelda}"
+                                                   HorizontalOptions="StartAndExpand">
+                                      <StackLayout Style="{StaticResource StackCelda2}">
+                                          <Label Text="{Binding NomCarrera}"
+                                                 Style="{StaticResource LabelNombreCarrera}"/>
+                                          <Label Text="{Binding LugarCarrera}"
+                                                 Style="{StaticResource LabelCeldas}"/>
+                                      </StackLayout>
+                                      </StackLayout>
+                                  </ViewCell>                                             
+                             </DataTemplate>
+                        </ListView.ItemTemplate>
+                   </ListView>
+             </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

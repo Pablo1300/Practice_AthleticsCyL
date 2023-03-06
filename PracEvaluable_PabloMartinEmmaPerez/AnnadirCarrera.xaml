@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PracEvaluable_PabloMartinEmmaPerez.AnnadirCarrera">
+
+    <ContentPage.Content>
+        
+        <StackLayout Style="{StaticResource StackFondo}" >
+
+            <StackLayout Style="{StaticResource StackLayoutTitulo}">
+
+                <Image Style="{StaticResource logo}"/>
+
+                <Label x:Name="labelTitulo"
+                       Text="Añadir carrera"
+                       Style="{StaticResource labelTitulo}"/>
+
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Frame Style="{StaticResource Frame}">
+
+                    <StackLayout Style="{StaticResource StackLayoutVerCen}">
+
+                        <Entry x:Name="entradaIdCarrera"
+                               Placeholder="Identificador de la carrera"
+                               Style="{StaticResource Entrys}"/>
+                        <Entry x:Name="entradaNombreCarrera"
+                               Placeholder="Nombre de la carrera"
+                               Style="{StaticResource Entrys}"/>
+                        <Entry x:Name="entradaLugarCarrera"
+                               Placeholder="Lugar de la carrera"
+                               Style="{StaticResource Entrys}"/>
+
+                         <Picker x:Name="EspecialidadCarreraPicker"
+                                 Title="Especialidad"
+                                 TitleColor="Black"
+                                 TextColor="White">
+                            <Picker.Items>
+                                <x:String>Ruta</x:String>
+                                <x:String>Trail</x:String>
+                                <x:String>Marcha</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                        <DatePicker x:Name="selectorFechaCarrera"/>
+
+                        <TimePicker x:Name="selectorHoraCarrera"/>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Gratuita:"
+                                   Style="{StaticResource CommonLabel}"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Text="NO" 
+                                   Style="{StaticResource LabelSwitch}"/>
+                            <Switch x:Name="gratuidadCarrera"
+                                    Style="{StaticResource SwitchGratis}"
+                                    IsToggled="True"/>
+                            <Label Text="SI"
+                                   Style="{StaticResource LabelSwitch}"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="StartAndExpand">
+
+                <Button Text="Guardar"
+                        Style="{StaticResource ButtonSecundario}"
+                        Clicked="Button_Guardar_Clicked"/>
+
+                <Button Text="Limpiar"
+                        Style="{StaticResource ButtonSecundario}"                        
+                        Clicked="Button_Limpiar_Clicked"/>               
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

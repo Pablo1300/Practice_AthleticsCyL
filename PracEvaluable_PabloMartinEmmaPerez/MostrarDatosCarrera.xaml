@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PracEvaluable_PabloMartinEmmaPerez.MostrarDatosCarrera">
+    <ContentPage.Content>
+
+        <StackLayout  Style="{StaticResource StackFondo}">
+
+            <StackLayout Style="{StaticResource StackLayoutTitulo}">
+                <Image Style="{StaticResource logo}"/>
+                <Label x:Name="labelTitulo"
+                       Text="Características"
+                       Style="{StaticResource labelTitulo}"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Frame Style="{StaticResource Frame}">
+
+                    <StackLayout Style="{StaticResource StackLayoutVerCen}">
+
+                        <Label x:Name="labelIdCarrera"
+                               HorizontalTextAlignment="Center"
+                               Style="{StaticResource CommonLabel}"
+                               FontSize="15"/>
+
+                            <Label x:Name="labelNombreCarrera"
+                                   HorizontalTextAlignment="Center"
+                                   Style="{StaticResource CommonLabel}"
+                                   FontSize="30"/>
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="Center">
+                            <Image Source="ubi.png"
+                                   HeightRequest="20"/>
+                            <Label x:Name="labelLugarCarrera"
+                                   Style="{StaticResource CommonLabel}"/>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Especialidad:"
+                                   Style="{StaticResource CommonLabel}"/>
+                            <Label x:Name="labelEspecialidad"
+                                   Style="{StaticResource CommonLabel}"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Gratuita:"
+                                   Style="{StaticResource CommonLabel}"/>
+                            <Label x:Name="labelGratis"
+                                   Style="{StaticResource CommonLabel}"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Fecha:"
+                                   Style="{StaticResource CommonLabel}"/>
+                            <Label x:Name="labelFechaCarrera"
+                                   Style="{StaticResource CommonLabel}"/>
+                            <Label x:Name="labelHoraCarrera"
+                                   Style="{StaticResource CommonLabel}"/>
+                        </StackLayout>  
+                        
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Lista de corredores"
+                       Style="{StaticResource LabelTituloListView}"/>
+                <ListView x:Name="listviewCorredores"
+                          Style="{StaticResource listviews}">
+                        <ListView.ItemTemplate>
+                             <DataTemplate>
+                                  <ViewCell>
+                                      <StackLayout Style="{StaticResource StackCelda}"
+                                                   HorizontalOptions="StartAndExpand">
+                                      <StackLayout Style="{StaticResource StackCeldaHor}">
+                                          <Label Text="{Binding Nombre}"
+                                                 Style="{StaticResource CommonLabel}"/>
+                                          <Label Text="{Binding Apellidos}"
+                                                 Style="{StaticResource CommonLabel}"/>
+                                      </StackLayout>
+                                      </StackLayout>
+                                  </ViewCell>                                             
+                             </DataTemplate>
+                        </ListView.ItemTemplate>
+                   </ListView>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

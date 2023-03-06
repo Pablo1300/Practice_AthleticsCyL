@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracEvaluable_PabloMartinEmmaPerez.MainPage">
+        
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="FillAndExpand">
+
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="Black"
+                     Padding="20">
+            <Image Style="{StaticResource logo}"/>
+            <Label Text="Delegación de Atletismo de Castilla y León"
+                   FontAttributes="Bold"
+                   FontSize="23"
+                   Style="{StaticResource labelTitulo}"/>
+        </StackLayout>
+
+        <ScrollView Orientation="Vertical"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="0,-6,0,-6">
+            <StackLayout Orientation="Vertical">
+                <Button
+                    x:Name="opc1"
+                    Text="Añadir Carrera"
+                    Clicked="opc1_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+
+                <Button
+                    x:Name="opc2"
+                    Text="Gestionar Corredores"
+                    Clicked="opc2_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+
+                <Button
+                    x:Name="opc3"
+                    Text="Listado de Carreras"
+                    Clicked="opc3_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+
+                <Button
+                    x:Name="opc4"
+                    Text="Precio de las Carreras"
+                    Clicked="opc4_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+
+                <Button
+                    x:Name="opc5"
+                    Text="Especialidad de Carreras"
+                    Clicked="opc5_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+
+                <Button
+                    x:Name="opc6"
+                    Text="Carreras de un Corredor"
+                    Clicked="opc6_Clicked"
+                    Style="{StaticResource ButtonPrincipal}"/>
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="Black"
+                     Opacity="0.75">
+
+            <Image Source="escudoUPSA.png"
+                HeightRequest="70"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                Margin="6"/>
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="Center">
+                <Label Text="Pablo Martín Sánchez"
+                       TextColor="White"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       Margin="0"
+                       Padding="0,-2"/>
+                <Label Text="Emma Pérez García"
+                       TextColor="White"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       Padding="0,-2"/>
+                <Label Text="Universidad Pontificia de Salamanca"
+                       TextColor="White"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       Padding="0,-2"/>
+                </StackLayout>
+        </StackLayout>
+    </StackLayout> 
+
+</ContentPage>

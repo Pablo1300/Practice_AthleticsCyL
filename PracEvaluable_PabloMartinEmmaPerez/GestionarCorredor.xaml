@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PracEvaluable_PabloMartinEmmaPerez.GestionarCorredor">
+    <ContentPage.Content>
+
+        <StackLayout Style="{StaticResource StackFondo}">
+
+            <StackLayout Style="{StaticResource StackLayoutTitulo}">
+
+                <Image Style="{StaticResource logo}"/>
+                <Label Text="Gestión corredor"
+                       Style="{StaticResource labelTitulo}"/>
+
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Frame Style="{StaticResource Frame}">
+
+                    <StackLayout Style="{StaticResource StackLayoutVerCen}">
+
+                    <Entry x:Name="entradaNombreCarrera"
+                           Placeholder="Nombre de la carrera"
+                           Style="{StaticResource Entrys}"/>
+                    <Entry x:Name="entradaNombreCorredor"
+                           Placeholder="Nombre Corredor"
+                           Style="{StaticResource Entrys}"/>
+                    <Entry x:Name="entradaApellidosCorredor"
+                           Placeholder="Apellidos Corredor"
+                           Style="{StaticResource Entrys}"/>
+                    <Entry x:Name="entradaNifCorredor"
+                           Placeholder="NIF"
+                           Style="{StaticResource Entrys}"/>
+
+                    </StackLayout>
+                </Frame>
+            
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                         VerticalOptions="StartAndExpand">
+
+                    <Button Text="Guardar"
+                            Style="{StaticResource ButtonSecundario}"
+                            Clicked="Boton_Guardar_Clicked"/>
+
+                    <Button Text="Eliminar"
+                            Style="{StaticResource ButtonSecundario}"                        
+                            Clicked="Button_Eliminar_Clicked"/>
+
+                    <Button Text="Limpiar"
+                            Style="{StaticResource ButtonSecundario}"
+                            Clicked="Boton_Limpiar_Clicked"/>              
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

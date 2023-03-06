@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PracEvaluable_PabloMartinEmmaPerez.CarrerasCorredor">
+    <ContentPage.Content>
+        <StackLayout Style="{DynamicResource StackFondo}">
+
+             <StackLayout Style="{StaticResource StackLayoutTitulo}">
+
+                <Image Style="{StaticResource logo}"/>
+
+                <Label Text="Buscar carreras de corredor"
+                       Style="{StaticResource labelTitulo}"/>
+
+             </StackLayout>
+
+             <StackLayout HorizontalOptions="FillAndExpand"
+                          Style="{StaticResource StackLayoutTituloSecundario}">
+
+                 <StackLayout Style="{StaticResource StackLayoutTituloSecundario}"
+                              HorizontalOptions="CenterAndExpand">
+
+                     <SearchBar x:Name="busqueda"
+                                Placeholder="NIF Corredor a Buscar"
+                                BackgroundColor="CadetBlue"
+                                SearchButtonPressed="busqueda_SearchButtonPressed"/>
+                 </StackLayout>
+             </StackLayout>
+             <StackLayout Style="{StaticResource StackFondo}">
+
+                  <ListView x:Name="listviewCarreras"
+                            Style="{StaticResource listviews}">
+                        <ListView.ItemTemplate>
+                             <DataTemplate>
+                                  <ViewCell>
+                                       <StackLayout Orientation="Horizontal"
+                                                    VerticalOptions="Fill"
+                                                    HorizontalOptions="Fill">
+                                            <StackLayout Style="{StaticResource StackFondo}"
+                                                         HorizontalOptions="StartAndExpand">
+                                                <Label Text="{Binding NomCarrera}"
+                                                       HorizontalTextAlignment="Start"
+                                                       Style="{StaticResource LabelNombreCarrera}"/>
+                                                <Label Text="{Binding LugarCarrera}"
+                                                       HorizontalTextAlignment="Start"
+                                                       Style="{StaticResource LabelCeldas}"/>
+                                            </StackLayout>
+                                            <StackLayout Style="{StaticResource StackFondo}"
+                                                         HorizontalOptions="End"
+                                                         VerticalOptions="End">
+                                                 <Label Text="{Binding FechaCarreraString}"
+                                                        HorizontalTextAlignment="End"
+                                                        MaxLines="1"
+                                                        Style="{StaticResource LabelCeldas}"/>
+                                                <Label Text="{Binding HoraCarrera}"
+                                                        HorizontalTextAlignment="End"
+                                                        Style="{StaticResource LabelCeldas}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                             </DataTemplate>
+                        </ListView.ItemTemplate>
+                   </ListView>
+
+             </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
