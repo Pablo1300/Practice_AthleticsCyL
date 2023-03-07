@@ -1,10 +1,14 @@
 # Practice_AthleticsCyL
 
+## Screens scheme
+
+<img src=/Screenshots/Esquema.png alt="Color Palette" width="700"/>
+
 ## Color palette
 
 This is the color palette, it combines with the app's principal logo and with the rural house's essence, the nature.
 
-<img src=/Screenshots/Color Palatte.png alt="Color Palette" width="400"/>
+<img src=/Screenshots/Colors.png alt="Color Palette" width="400"/>
 
 ## Screenshots
 
